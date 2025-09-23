@@ -54,7 +54,7 @@ A modern, open-source photography blog platform built with the latest web techno
 
 ### Environment Variables
 
-Create a `.env.local` file in the root directory:
+Create a `.env` file in the root directory:
 
 ```bash
 # Database
