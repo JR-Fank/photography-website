@@ -14,16 +14,16 @@ export default function cloudflareLoader({
   if (src.startsWith("/")) {
     return src;
   }
-  // if (process.env.NODE_ENV === "development") {
-  //   return src;
-  // }
+  if (process.env.NODE_ENV === "development") {
+    return src;
+  }
   const params = [`width=${width}`];
   if (quality) {
     params.push(`quality=${quality}`);
   }
   const paramsString = params.join(",");
 
-  return `https://csl.jrfank.cc/cdn-cgi/image/${paramsString}/${normalizeSrc(
+  return `https://photo.jrfank.cc/cdn-cgi/image/${paramsString}/${normalizeSrc(
     src
   )}`;
 }
